@@ -1,0 +1,52 @@
+{
+  "name": "@coelho-ui/system",
+  "version": "1.0.0",
+  "description": "CoelhoUI system primitives",
+  "keywords": [
+    "system"
+  ],
+  "author": "Raul Semicek Coelho <raul.s.coelho@gmail.com>",
+  "main": "src/index.ts",
+  "sideEffects": false,
+  "files": [
+    "dist"
+  ],
+  "publishConfig": {
+    "access": "public"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/RaulSCoelho/coelho-ui.git",
+    "directory": "packages/core/system"
+  },
+  "scripts": {
+    "build": "tsup src !src/extend-variants.d.ts --dts",
+    "dev": "yarn build:fast -- --watch",
+    "clean": "rimraf dist .turbo",
+    "typecheck": "tsc --noEmit",
+    "prepack": "clean-package",
+    "postpack": "clean-package restore"
+  },
+  "peerDependencies": {
+    "react": ">=18"
+  },
+  "dependencies": {
+    "@coelho-ui/toast": "workspace:*",
+    "@coelho-ui/use-is-mounted": "workspace:*",
+    "@coelho-ui/use-local-storage": "workspace:*",
+    "@coelho-ui/use-media-query": "workspace:*"
+  },
+  "devDependencies": {
+    "clean-package": "2.2.0",
+    "react": "^18.0.0"
+  },
+  "clean-package": "../../../clean-package.config.json",
+  "tsup": {
+    "clean": true,
+    "target": "es2019",
+    "format": [
+      "cjs",
+      "esm"
+    ]
+  }
+}

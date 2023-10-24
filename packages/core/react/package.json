@@ -1,0 +1,79 @@
+{
+  "name": "@coelho-ui/react",
+  "version": "1.0.0",
+  "description": "🚀 Beautiful and modern React UI library.",
+  "author": "Raul Semicek Coelho <raul.s.coelho@gmail.com>",
+  "keywords": [
+    "next",
+    "next ui",
+    "components",
+    "modern components",
+    "react components",
+    "react ui"
+  ],
+  "main": "src/index.ts",
+  "sideEffects": false,
+  "files": [
+    "dist"
+  ],
+  "publishConfig": {
+    "access": "public"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/RaulSCoelho/coelho-ui.git",
+    "directory": "packages/core/react"
+  },
+  "scripts": {
+    "prebuild": "node src/scripts/prebuild.js",
+    "build": "tsup --dts",
+    "postbuild": "node src/scripts/postbuild.js",
+    "typecheck": "tsc --noEmit",
+    "build:fast": "tsup",
+    "prepack": "clean-package",
+    "postpack": "clean-package restore"
+  },
+  "peerDependencies": {
+    "react": ">=18"
+  },
+  "dependencies": {
+    "@coelho-ui/accordion": "workspace:*",
+    "@coelho-ui/alert": "workspace:*",
+    "@coelho-ui/badge": "workspace:*",
+    "@coelho-ui/button": "workspace:*",
+    "@coelho-ui/card": "workspace:*",
+    "@coelho-ui/collapse": "workspace:*",
+    "@coelho-ui/framer-transitions": "workspace:*",
+    "@coelho-ui/highlight": "workspace:*",
+    "@coelho-ui/icons": "workspace:*",
+    "@coelho-ui/input": "workspace:*",
+    "@coelho-ui/modal": "workspace:*",
+    "@coelho-ui/navbar": "workspace:*",
+    "@coelho-ui/popover": "workspace:*",
+    "@coelho-ui/react-utils": "workspace:*",
+    "@coelho-ui/ripple": "workspace:*",
+    "@coelho-ui/select": "workspace:*",
+    "@coelho-ui/shared-utils": "workspace:*",
+    "@coelho-ui/skeleton": "workspace:*",
+    "@coelho-ui/spinner": "workspace:*",
+    "@coelho-ui/system": "workspace:*",
+    "@coelho-ui/theme": "workspace:*",
+    "@coelho-ui/toast": "workspace:*",
+    "@coelho-ui/use-callback-ref": "workspace:*",
+    "@coelho-ui/use-effect-event": "workspace:*",
+    "@coelho-ui/use-event": "workspace:*",
+    "@coelho-ui/use-global-listeners": "workspace:*",
+    "@coelho-ui/use-interact-outside": "workspace:*",
+    "@coelho-ui/use-is-mounted": "workspace:*",
+    "@coelho-ui/use-layout-effect": "workspace:*",
+    "@coelho-ui/use-local-storage": "workspace:*",
+    "@coelho-ui/use-media-query": "workspace:*",
+    "@coelho-ui/use-resize": "workspace:*",
+    "@coelho-ui/use-timeout": "workspace:*"
+  },
+  "devDependencies": {
+    "clean-package": "2.2.0",
+    "react": "^18.0.0"
+  },
+  "clean-package": "../../../clean-package.config.json"
+}

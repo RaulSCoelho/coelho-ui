@@ -1,0 +1,50 @@
+{
+  "name": "@coelho-ui/shared-utils",
+  "version": "1.0.0",
+  "description": "A set of CoelhoUI utilities",
+  "keywords": [
+    "shared-utils"
+  ],
+  "author": "Raul Semicek Coelho <raul.s.coelho@gmail.com>",
+  "main": "src/index.ts",
+  "sideEffects": false,
+  "files": [
+    "dist"
+  ],
+  "publishConfig": {
+    "access": "public"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/RaulSCoelho/coelho-ui.git",
+    "directory": "packages/utilities/shared-utils"
+  },
+  "scripts": {
+    "build": "tsup src --dts",
+    "clean": "rimraf dist .turbo",
+    "typecheck": "tsc --noEmit",
+    "build:fast": "tsup src",
+    "prepack": "clean-package",
+    "postpack": "clean-package restore"
+  },
+  "peerDependencies": {
+    "react": ">=18"
+  },
+  "dependencies": {
+    "uuid": "^9.0.1"
+  },
+  "devDependencies": {
+    "@types/uuid": "^9.0.4",
+    "clean-package": "2.2.0",
+    "react": "^18.0.0"
+  },
+  "clean-package": "../../../clean-package.config.json",
+  "tsup": {
+    "clean": true,
+    "target": "es2019",
+    "format": [
+      "cjs",
+      "esm"
+    ]
+  }
+}

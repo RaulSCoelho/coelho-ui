@@ -1,0 +1,43 @@
+{
+  "name": "@coelho-ui/badge",
+  "version": "1.0.0",
+  "description": "A React badge component for labeling or dotting other elements.",
+  "keywords": [
+    "badge"
+  ],
+  "author": "Raul Semicek Coelho <raul.s.coelho@gmail.com>",
+  "main": "src/index.ts",
+  "sideEffects": false,
+  "files": [
+    "dist"
+  ],
+  "publishConfig": {
+    "access": "public"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/RaulSCoelho/coelho-ui.git",
+    "directory": "packages/components/badge"
+  },
+  "scripts": {
+    "build": "tsup src --dts",
+    "build:fast": "tsup src",
+    "clean": "rimraf dist .turbo",
+    "typecheck": "tsc --noEmit",
+    "prepack": "clean-package",
+    "postpack": "clean-package restore"
+  },
+  "peerDependencies": {
+    "react": ">=18"
+  },
+  "dependencies": {
+    "@coelho-ui/shared-utils": "workspace:*",
+    "@coelho-ui/theme": "workspace:*",
+    "clean-package": "2.2.0"
+  },
+  "devDependencies": {
+    "clean-package": "2.2.0",
+    "react": "^18.0.0"
+  },
+  "clean-package": "../../../clean-package.config.json"
+}
